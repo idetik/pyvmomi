@@ -310,7 +310,7 @@ def FormatObject(val, info=Object(name="", type=object, flags=0), indent=0):
    elif isinstance(val, bool):
       result = val and "true" or "false"
    elif isinstance(val, datetime):
-      result = Iso8601.ISO8601Format(val)
+      result = pyVmomi.Iso8601.ISO8601Format(val)
    elif isinstance(val, binary):
       result = base64.b64encode(val)
    else:
